@@ -113,7 +113,7 @@ i{
     height: 110px;
 }
 #nombre > h1{
-    color:#FFEB01;
+    color:whitesmoke;
     line-height: 110px;
     width: 100%;
     text-align: left;
@@ -144,6 +144,11 @@ i{
 /*MENU PRINCIPAL AFTER HEADER*/
 #menu2 .main{
     padding-left: 5px;
+}
+#menu2 .bars{
+    line-height: 40px;
+    color:rgb(37, 37, 37);
+    display: none;
 }
 #menu2{
     width: 100%;
@@ -272,20 +277,24 @@ hr{
     left: 10px;
     bottom: 15px;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 45px;
     color:green;
 }
 #contenido-principal #phone{
     position: fixed;
-    right: 10px;
-    bottom: 15px;
+    left: 10px;
+    bottom: 65px;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 30px;
     color:#444;
     padding: 5px;
-    /*transform: rotate(90deg);*/
+    transform: rotate(90deg);
     background-color: #FFEB01;
     border-radius: 50%;
+}
+#contenido-principal #phone > i{
+    padding: 0px;
+    margin: 0px auto;
 }
 /*Footer*/
 #footer{
