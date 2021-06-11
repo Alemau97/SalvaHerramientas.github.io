@@ -1,11 +1,11 @@
 /*instrucciones básicas*/
 @import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
 *{
-    box-sizing: border-box !important;
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none !important;
+    text-decoration: none;
 }
 /*Encabezado*/
 body{
@@ -33,7 +33,7 @@ i{
 #menu1 > ul > li{
     display: block;
     float: left;
-    padding: 2.5px 10px 2.5px 15px !important;
+    padding: 2.5px 10px 2.5px 15px;
     border-right: 1px solid #4444;
 }
 #menu1 > ul > li > a{
