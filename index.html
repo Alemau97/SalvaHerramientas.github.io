@@ -4,6 +4,7 @@
 <head>
     <title>SalvaHerramientas</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="author" content="SalvaHerramientas">
     <link rel="icon" type="image/png" href="img/LogoSH.jpeg">
     <script src="https://kit.fontawesome.com/6f21d51ccc.js" crossorigin="anonymous"></script>
@@ -22,7 +23,6 @@
                 <li><a href="#"><i class="fas fa-map-marker-alt"></i>Dirección</a></li>
                 <li><a href="#"><i class="fas fa-phone-alt"></i>Teléfono</a></li>
             </ul>
-            
         </nav>
         <!--HEADER-->
         <header id="header">
@@ -37,10 +37,10 @@
                 </div>
                 <div id="comp-head">
                     <ul id="submenu-head">
-                        <li><a href="index.html"><i class="fas fa-home first"></i>Inicio</a></li>
-                        <li><a href="#"><i class="fas fa-info-circle first"></i>Sobre nosotros</a></li>
-                        <li><a href="#"><i class="far fa-envelope first"></i>Contáctanos</a></li>
-                        <li><a href="#"><i class="fas fa-store-alt first"></i>Taller</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                        <li><a href="#">Taller</a></li>
                         <li><a href="#" id="ofertas"><i class="fas fa-hand-holding-usd first"></i>Ofertas</a></li>
                     </ul>
                     <div class="clearfix"></div>
@@ -49,6 +49,7 @@
         </header>
         <!--MENU PRINCIPAL NAV-->
         <nav id="menu2">
+            <!--<div id="menu2-container"></div>-->
             <ul>
                 <li><a href="#">Herramienta Eléctrica<i class="fas fa-angle-down main"></i></a>
                     <ul>
@@ -83,13 +84,28 @@
                         <li><a href="#">Y mucho más pruebas xd</a></li>
                     </ul>
                 </li>
+                <li><a href="#">Más<i class="fas fa-angle-down main"></i></a>
+                    <ul id="last-one">
+                        <li><a href="#">Taller</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                    </ul>
+                </li>
             </ul>
             <a href="#"><i class="fas fa-bars bars"></i></a>
         </nav>
         <!--Apartado para el Carousel-->
         <div id="main-carousel">
             <h1>Sucursal</h1>
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="6000">
+            <div id="sociales">
+                <h2>Redes sociales</h2>
+                <ul>
+                    <li><a href="#"><i class="fab fa-whatsapp"></i><p>Whatsapp</p></a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i><p>Facebook</p></a></li>
+                    <li><a href="#"><i class="far fa-envelope first"></i><p>Correo</p></a></li>
+                </ul>
+            </div>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img class="d-block w-100" src="img/local.jpeg" alt="First slide">
@@ -101,7 +117,7 @@
                     <img class="d-block w-100" src="img/local3.jpeg" alt="Third slide">
                   </div>
                 </div>
-              </div>
+            </div>
         </div>
         <div class="clearfix"></div>
         <!--INICIA EL PURO CONTENIDO-->
@@ -147,6 +163,7 @@
                         <p>Texto de prueba para observar los titulos</p>
                         <p>Q 500</p>
                         <p>En existencia</p>
+                        <p><a href="#">Más</a></p>
                     </section>
                     <section class="mas-publico col-xl-4">
                         <img src="img/taladroprueba.jpg" title="#" alt="#">

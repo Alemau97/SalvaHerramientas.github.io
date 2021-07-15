@@ -29,24 +29,33 @@ body{
 }
 /*Primer menu*/
 #menu1{
-    background-color: white;
+    background-color: black;
 }
 #menu1 ul{
     margin: 0px;
     padding: 0px;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 #menu1 ul > li > a{
     padding: 5px;
-    color: #444;
+    color: whitesmoke;
     transition: all 300ms;
 }
-#menu1 ul > li > a:hover{
-    text-shadow: 0px 0px 0.5px #444;
+#menu1 ul > li > a:hover i{
+    animation: rotating 0.5s linear;
+}
+@keyframes rotating{
+    from{
+        transform: rotateY(180deg);
+    }   
+    to{
+        transform: rotateY(0deg);
+    }
 }
 #menu1 ul > li:hover{
-    box-shadow: 0.5px 0.5px 1px #cccc inset;
+    transform: scale(1.1,1.1);
 }
 #menu1 ul > li > a:active{
     box-shadow: -2px -2px 2px #cccc inset;
@@ -58,6 +67,7 @@ body{
 #img-head{
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 #header{
     height: 170px;
@@ -98,27 +108,38 @@ body{
 #submenu-head > li > a{
     padding: 10px;
     line-height: 150px;
-    font-size: 18px;
+    font-size: 19px;
     color: whitesmoke;
     transition: all 300ms;
 }
-#submenu-head > li:last-child > a{
-    background-color: red;
-    border-radius: 10px;
-}
 #submenu-head > li > a:hover{
-    font-size: 18.2px;
+    font-size: 19.5px;
     text-shadow: 1px 1px 2px#cccc;
 }
-#submenu-head > li:last-child > a:hover{
-    box-shadow: -2px -2px 3px brown inset;
+#submenu-head > li:last-child > a{
+    margin-left: 20px;
+    font-weight: bold;
+    background-color: #F47A12;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #643207, 1.25px 1.5px 2px #643207, 1.5px 2px 2px #643207;
 }
-#submenu-head > li:last-child > a:active{
-    box-shadow: -4px -4px 5px brown inset;
-    text-shadow: 0px 0px 3 #cccc;
+#submenu-head > li:last-child > a:hover{
+    box-shadow: -2px -2px 3px #643207 inset;
+}
+#submenu-head > li:last-child > a > i{
+    animation: offers 2s infinite linear;
+}
+@keyframes offers{
+    from{
+       transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
 }
 /*Barra de menu principal*/
 #menu2{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -148,15 +169,23 @@ body{
 #menu2 ul > li:hover > a{
     text-shadow: 0px 0px 0.25px #4444;
 }
+#menu2 ul > li:last-child > a{
+    border: none;
+}
 #menu2 ul > li > ul{
     display: none;
+    color:#444;
 }
 /*Menu desplegable*/
 #menu2 ul > li:hover > ul{
     display: block;
     position: absolute;
+    font-weight: bolder;
     width: 225px;
     z-index: 1;
+}
+#menu2 ul > li:hover > #last-one{
+    width: 100px;
 }
 #menu2 ul > li:hover > #segunda{
     display: block;
@@ -195,21 +224,66 @@ body{
     margin-top: 5px;
     margin-bottom: 5px;
 }
-#carouselExampleSlidesOnly{
+#sociales{
+    margin-right: 75px;
+    width: 20%;
+    float: right;
+}
+#sociales h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #444;
+    font-weight: bold;
+}
+#sociales ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+#sociales ul > li{
+    margin-bottom: 25px;
+    font-size: 45px;
+}
+#sociales ul li a{
+    color:#444;
+}
+#sociales ul li a p{
+    display: block;
+    position: absolute;
+    margin-left: 60px;
+    margin-top: -50px;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 300ms;
+    font-size: 20px;
+}
+#sociales ul li a:hover p{
+    transform: translateX(0%);
+    opacity: 1;
+}
+.carousel{
+    width: 70%;
+    height: 350px;
+    float: left;
+    margin-left: 75px;
     padding: 20px;
     padding-top: 10px;
-    height: 300px;
 }
 #main-carousel h1{
+    margin-left: 75px;
+    margin-right: 75px;
     padding: 5px;
     padding-left: 20px;
     font-size: 20px;
     color: #444;
-    border-bottom: 1px solid gray;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
 }
 .carousel-item img{
-    width: 1000px;
-    height: 270px;
+    width: auto;
+    height: 320px;
+    border-radius: 5px;
 }
 /*Espacio contenido luego de carousel*/
 #lateral-main{
@@ -230,16 +304,34 @@ body{
 }
 .row{
     margin-bottom: 25px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    overflow: hidden;
 }
 #contenedor-main .row h1{
     font-size: 20px;
     color: #444;
-    border-bottom: 1px solid gray;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    animation: sideTitle 1s linear;
 }
 #lateral-main .row h1{
+    width: 99%;
     font-size: 20px;
-    color: red;
-    border-bottom: 1px solid gray;
+    background-color: #F47A12;
+    color: whitesmoke;
+    font-weight: bold;
+    box-shadow: 1px 2px 2px #643207, 1.5px 2.5px 3px #643207, 2px 3px 4px #643207;
+    border-radius: 3px;
+    animation: sideTitle 1s linear;
+}
+@keyframes sideTitle{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
 }
 .mas-publico img{
     width: 125px;
@@ -251,14 +343,11 @@ body{
 }
 .mas-publico,
 .mas-vendidos{
-    padding: 5px;
+    padding-right: 5px;
     text-align: center;
 }
 .mas-publico{
-    border-right: 1px solid #cccccc;
-}
-.mas-publico:last-child{
-    border-right: none;
+    box-shadow: 2px 2px 3px #cccccc;
 }
 /*footer*/
 #footer{
@@ -271,4 +360,19 @@ body{
     margin: 0px auto;
     padding: 10px;
     color:whitesmoke
+}
+/*Contactos rápidos*/
+#whatsapp{
+    position:fixed;
+    left:15px;
+    bottom: 25px;
+    font-size: 45px;
+    color:green;
+}
+#phone{
+    position:fixed;
+    right:15px;
+    bottom: 25px;
+    font-size: 35px;
+    color:rgb(37, 131, 253);
 }
