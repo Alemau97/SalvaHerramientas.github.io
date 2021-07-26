@@ -145,7 +145,26 @@ body{
     flex-direction: row;
     justify-content: center;*/
     background-color: #FFEB01 !important;
-}/*
+}
+.nav-item{
+    margin: 0px;
+    padding: 0px;
+}
+.nav-item:hover > a{
+    background-color: #fce700;
+    box-shadow: -1px -0.5px 2px #4444 inset;
+    transition: all 300ms;
+}
+.nav-item #navbarDropdown{
+    color: #444;
+    font-weight: bold;
+}
+.dropdown-item:hover{
+    text-shadow: 0px 0px 0.5px #444;
+    background-color: #fce700;
+    transition: all 300ms;
+}
+/*
 #menu2 ul{
     margin: 0px;
     padding: 0px;
